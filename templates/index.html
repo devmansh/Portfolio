@@ -296,11 +296,13 @@
                 leadership skills with core knowledge of
                 software and web-application designing
                 principles using Python and C++.</em></p>
-              <ul>
-                <li>Agra, UP, INDIA</li>
-                <li>(+91) 8006586647</li>
-                <li>support@pssports.in.net</li>
-              </ul>
+              {% if user.is_authenticated %}
+                <ul>
+                  <li>Agra, UP, INDIA</li>
+                  <li>(+91) 999999999</li>
+                  <li>address@domain.com</li>
+                </ul>
+              {% endif %}
             </div>
 
             <h3 class="resume-title">Education</h3>
@@ -550,13 +552,13 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>support@pssports.in.net</p>
+                <p>address@domain.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 80065 86647</p>
+                <p>+91 99999 99999</p>
               </div>
 
             </div>
@@ -625,7 +627,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{%static 'assets/vendor/purecounter/purecounter'%}%.js"></script>
+  <script src="{%static 'assets/vendor/purecounter/purecounter.js'%}"></script>
   <script src="{%static 'assets/vendor/aos/aos.js'%}"></script>
   <script src="{%static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
   <script src="{%static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
