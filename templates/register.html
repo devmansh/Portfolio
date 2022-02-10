@@ -1,0 +1,100 @@
+<!--{% load static %}
+<center>
+<h1>Register yourself here</h1>
+
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+
+<form method="POST" action="register">
+    {% csrf_token %}
+    <p>Username</p>
+    <input type ="text" name="username"/>
+    <p>Email</p>
+    <input type ="email" name="email"/>
+    <p>Password</p>
+    <input type ="password" name="password"/>
+    <p>Repeat Password</p>
+    <input type ="password" name="password2"/><br><br>
+    <input type = "submit" />
+    <a href="login">Have Account?</a>
+</form>
+</center>
+-->
+{% load static %}
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+<link href="{%static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+<link href="{%static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{%static 'assets/css/style.css'%}" rel="stylesheet">
+
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Register</h2>
+      </div>
+
+      <div class="row mt-1">
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Pratap &amp; Sons Sports, Agra, UP, INDIA</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>support@pssports.in.net</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+91 80065 86647</p>
+            </div>
+
+            <div class="phone">
+                <i class="bi bi-house-fill"></i>
+                <h4><a href="/" >Home</a></h4>
+                <p>Go back to Home<p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+          <form action="register" method="post" role="form" class="php-email-form">
+              {% csrf_token %}
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="username" name="username" class="form-control" id="username" placeholder="Username" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" name="email" class="form-control" id="email" placeholder="email" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="password" class="form-control" name="password2" id="password2" placeholder="Re-Enter Password" required>
+              </div>
+            </div>
+            <div class="text-center"><button type="submit">Register</button><a href="login">&ensp;Already have an Account?</a></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>

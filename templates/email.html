@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Manoj | e-Mail</title>
+</head>
+<body>
+    <center>
+        <h1>Send Email to Manoj</h1>
+        <hr>
+        {% for email_message in messages %}
+            <p style="color:red;">{{email_message}}</p>
+        {% endfor %}
+        <form method="POST">
+            {% csrf_token %}
+            <table border="1">
+                {{form}}
+            </table>
+            <input type="submit" value="Send" />
+        </form>
+    </center>
+</body>
+</html>
